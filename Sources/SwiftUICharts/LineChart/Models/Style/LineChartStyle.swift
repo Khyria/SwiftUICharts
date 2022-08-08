@@ -174,7 +174,7 @@ public struct LineChartStyle: CTLineChartStyle {
         self.xAxisLabelFont = xAxisLabelFont
         self.xAxisLabelsFrom = xAxisLabelsFrom
         self.xAxisLabelColour = xAxisLabelColour
-        self.xAxisLabelsXOffset = xAxisLabelsXOffset
+        self.xAxisLabelsXOffset = min(max(xAxisLabelsXOffset, -1.0), 1.0)
         
         self.xAxisTitle = xAxisTitle
         self.xAxisTitleFont = xAxisTitleFont
