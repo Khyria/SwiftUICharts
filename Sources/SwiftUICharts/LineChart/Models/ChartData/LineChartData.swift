@@ -86,6 +86,8 @@ public final class LineChartData: CTLineChartDataProtocol, GetDataProtocol, Publ
                                                height: self.viewData.xAxisLabelHeights.max() ?? 0)
                                         .offset(x: CGFloat(i) * (geo.frame(in: .local).width / CGFloat(self.dataSets.dataPoints.count - 1)),
                                                 y: 0)
+                                        .offset(x: self.getXSection(dataSet: self.dataSets, chartSize: self.viewData.chartSize) * self.chartStyle.xAxisLabelsXOffset,
+                                                y: 0.0)
                                 }
                             }
                         }
@@ -108,6 +110,9 @@ public final class LineChartData: CTLineChartDataProtocol, GetDataProtocol, Publ
                             }
                             .frame(width: self.viewData.xAxislabelWidths.min(),
                                    height: self.viewData.xAxisLabelHeights.max())
+                            .offset(x: self.getXSection(dataSet: self.dataSets, chartSize: self.viewData.chartSize) * self.chartStyle.xAxisLabelsXOffset,
+                                    y: 0.0)
+
                             if i != labelArray.count - 1 {
                                 Spacer()
                                     .frame(minWidth: 0, maxWidth: 500)

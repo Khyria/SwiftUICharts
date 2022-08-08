@@ -90,6 +90,9 @@ public final class BarChartData: CTBarChartDataProtocol, GetDataProtocol, Publis
                         }
                         .frame(width: self.getXSection(dataSet: self.dataSets, chartSize: self.viewData.chartSize),
                                height: self.viewData.xAxisLabelHeights.max())
+                        .offset(x: self.getXSection(dataSet: self.dataSets, chartSize: self.viewData.chartSize) * self.chartStyle.xAxisLabelsXOffset,
+                                y: 0.0)
+
                         Spacer()
                             .frame(minWidth: 0, maxWidth: 500)
                     }
@@ -109,6 +112,9 @@ public final class BarChartData: CTBarChartDataProtocol, GetDataProtocol, Publis
                             }
                             .frame(width: self.viewData.xAxislabelWidths.max(),
                                    height: self.viewData.xAxisLabelHeights.max())
+                            .offset(x: self.getXSection(dataSet: self.dataSets, chartSize: self.viewData.chartSize) * self.chartStyle.xAxisLabelsXOffset,
+                                    y: 0.0)
+
                             if i != labelArray.count - 1 {
                                 Spacer()
                                     .frame(minWidth: 0, maxWidth: 500)
