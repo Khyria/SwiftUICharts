@@ -37,6 +37,7 @@ public struct BarChartStyle: CTBarChartStyle {
     public var xAxisLabelFont: Font
     public var xAxisLabelColour: Color
     public var xAxisLabelsFrom: LabelsFrom
+    public var xAxisLabelsXOffset: CGFloat
     
     public var xAxisTitle: String?
     public var xAxisTitleFont: Font
@@ -128,6 +129,7 @@ public struct BarChartStyle: CTBarChartStyle {
         xAxisLabelFont: Font = .caption,
         xAxisLabelColour: Color = Color.primary,
         xAxisLabelsFrom: LabelsFrom = .dataPoint(rotation: .degrees(0)),
+        xAxisLabelsXOffset: CGFloat = 0.0,
         
         xAxisTitle: String? = nil,
         xAxisTitleFont: Font = .caption,
@@ -171,6 +173,7 @@ public struct BarChartStyle: CTBarChartStyle {
         self.xAxisLabelFont = xAxisLabelFont
         self.xAxisLabelColour = xAxisLabelColour
         self.xAxisLabelsFrom = xAxisLabelsFrom
+        self.xAxisLabelsXOffset = xAxisLabelsXOffset
         
         self.xAxisTitle = xAxisTitle
         self.xAxisTitleFont = xAxisTitleFont

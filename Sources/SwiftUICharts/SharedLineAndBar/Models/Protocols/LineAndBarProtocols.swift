@@ -135,7 +135,13 @@ public protocol CTLineBarChartStyle: CTChartStyle {
      Where the label data come from. DataPoint or ChartData.
      */
     var xAxisLabelsFrom: LabelsFrom { get set }
-    
+
+    /**
+     The x offset of labels. Moves the label proportional to the bar's width. The value should be between -1.0 and 1.0.
+     Negative for moving to the left and positive for moving to the right.
+     */
+    var xAxisLabelsXOffset: CGFloat { get set }
+
     /**
      Label to display next to the chart giving info about the axis.
      */
